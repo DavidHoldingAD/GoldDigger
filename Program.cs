@@ -111,7 +111,7 @@ namespace GoldDigger
 			int n = field.GetLength(1);
 
 			// създаваме генератор на произволни числа
-			Random random = new Random();
+			var random = new Random();
 
 			do
 			{
@@ -135,7 +135,7 @@ namespace GoldDigger
 		static Item[,] CreateField(int m, int n, out int ourGuyX, out int ourGuyY, out int diamondsTotal)
 		{
 			// създаваме празно поле
-			Item[,] field = new Item[m, n];
+			var field = new Item[m, n];
 
 			// намираме подходяща позиция за "нашия човек"
 			GetEmptyPosition(field, out ourGuyX, out ourGuyY);
@@ -143,7 +143,7 @@ namespace GoldDigger
 			field[ourGuyX, ourGuyY] = Item.OurGuy;
 
 			// изчисляваме броя на "чуждите хора"
-			int someGuyCount = (int)(m * n * 0.05);
+			var someGuyCount = (int)(m * n * 0.05);
 			for (int i = 0; i < someGuyCount; i++)
 			{
 				// намираме подходяща позиция за "чужд човек"
@@ -165,7 +165,7 @@ namespace GoldDigger
 			}
 
 			// създаваме генератор на случайни числа
-			Random random = new Random();
+			var random = new Random();
 
 			// обхождаме всички позиции в полето
 			for (int y = 0; y < n; y++)
@@ -382,7 +382,7 @@ namespace GoldDigger
 			int n = field.GetLength(1);
 
 			// създаваме генератор на произволни числа
-			Random random = new Random();
+			var random = new Random();
 
 			// обхождаме всички позиции в полето
 			for (int y = 0; y < n; y++)
